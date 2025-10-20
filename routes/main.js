@@ -17,5 +17,8 @@ router.get("/date", (req, res) => {
     res.send(`<h1>Current date and time: ${now}</h1>`);
 });
 
+// Handle favicon requests to avoid browser errors
+router.get('/favicon.ico', (req, res) => res.status(204));
+
 // Export the router object so index.js can access it
 module.exports = router;
